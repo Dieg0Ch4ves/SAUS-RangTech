@@ -1,0 +1,152 @@
+section {
+  display: flex;
+  flex-direction: column;
+  margin-top: 100px;
+  align-items: center;
+  margin-left: 400px;
+  gap: 40px;
+}
+
+h2 {
+  font-weight: 400;
+}
+
+h1 {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+h1 a {
+  position: relative;
+  color: var(--cor-5);
+}
+h1 a::before {
+  content: "";
+  background: var(--cor-5);
+  width: 0;
+  bottom: 0px;
+  height: 3px;
+  position: absolute;
+  transition: 0.3s;
+}
+
+h1 a:hover::before {
+  width: 100%;
+}
+
+span {
+  font-weight: bold;
+}
+
+.list-cards {
+  display: flex;
+  gap: 40px;
+  flex-wrap: wrap;
+  align-items: center;
+  flex-direction: column;
+  margin-bottom: 100px;
+}
+
+.card {
+  display: flex;
+  background: var(--cor-2);
+  padding: 30px;
+  border-radius: 10px;
+  flex-direction: column;
+  gap: 30px;
+  box-shadow: 8px 4px 10px rgba(0, 0, 0, 0.04);
+  transition: 0.3s;
+}
+
+.card:hover {
+  padding: 40px;
+}
+
+.edit {
+  background: transparent;
+  border: none;
+  transition: 0.3s;
+}
+
+.edit:hover {
+  cursor: pointer;
+  background: var(--cor-5);
+  font-size: 20px;
+}
+
+.delete-s {
+  background: transparent;
+  border: none;
+  transition: 0.3s;
+}
+
+.delete-s:hover {
+  cursor: pointer;
+  background: rgb(148, 0, 0);
+  font-size: 20px;
+}
+
+.new-scheduling {
+  width: 200px;
+  font-size: 1.25rem;
+  padding: 10px;
+  border-radius: 4px;
+  border: 2px solid var(--cor-1);
+  background: var(--cor-5);
+  color: var(--cor-2);
+}
+
+.new-scheduling:hover {
+  cursor: pointer;
+  background: var(--cor-6);
+}
+
+.list-schedulings {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.list-schedulings li {
+  list-style: circle;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.div-options {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.delete {
+  width: 80px;
+  font-size: 1.25rem;
+  padding: 10px;
+  border-radius: 4px;
+  border: 2px solid var(--cor-1);
+  background: red;
+  color: var(--cor-2);
+}
+
+.delete:hover {
+  cursor: pointer;
+  background: rgb(157, 0, 0);
+}
+
+.change {
+  width: 80px;
+  font-size: 1.25rem;
+  padding: 10px;
+  border-radius: 4px;
+  border: 2px solid var(--cor-1);
+  background: yellow;
+  color: var(--cor-1);
+}
+
+.change:hover {
+  cursor: pointer;
+  background: rgb(168, 168, 0);
+}

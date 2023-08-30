@@ -1,0 +1,112 @@
+nav {
+  width: 100%;
+  position: fixed;
+  z-index: 3;
+  transition: 0.3s;
+}
+
+.nav-bar-scrolled {
+  background: var(--cor-3);
+}
+
+.flex {
+  display: flex;
+  justify-content: space-between;
+  padding-left: 100px;
+  padding-right: 100px;
+  font-size: 1.25rem;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  box-shadow: 8px 4px 10px rgba(0, 0, 0, 0.10);
+  align-items: center;
+}
+
+.home {
+  font-style: italic;
+  color: #000;
+  font-size: 2rem;
+  transition: 0.3s;
+  background: transparent;
+}
+
+.home:hover {
+  font-size: 3rem;
+}
+
+.bar-div {
+  display: flex;
+  gap: 40px;
+}
+
+.bar-div a button {
+  background: transparent;
+  font-size: 1.25rem;
+  color: #000;
+  position: relative;
+  border: none;
+}
+
+.bar-div button::after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 0px;
+  height: 2px;
+  background: #000;
+  transition: 0.3s;
+}
+
+.bar-div button:hover::after {
+  width: 100%;
+}
+
+.bar-div button:hover {
+  cursor: pointer;
+}
+
+
+@media(max-width: 1000px) {
+  .home {
+    font-size: 1.5rem;
+  }
+
+  .home:hover {
+    font-size: 2rem;
+  }
+
+  .bar-div a button {
+    font-size: 1rem;
+  }
+}
+
+@media(max-width: 850px) {
+  .flex {
+    padding-left: 60px;
+    padding-right: 60px;
+  }
+}
+
+@media(max-width: 650px) {
+  .flex {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+
+  .home {
+    font-size: 1.25rem;
+  }
+
+  .home:hover {
+    font-size: 1.5rem;
+  }
+
+  .bar-div a button {
+    font-size: 0.75rem;
+  }
+
+  .bar-div {
+    display: flex;
+    gap: 10px;
+  }
+
+}

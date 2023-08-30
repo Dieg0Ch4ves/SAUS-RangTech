@@ -1,0 +1,27 @@
+<h2 mat-dialog-title>Novo Médico</h2>
+<div mat-dialog-content>
+  <form [formGroup]="doctorForm">
+    <mat-form-field class="input">
+      <mat-label>Nome </mat-label>
+      <input matInput formControlName="name" name="name">
+    </mat-form-field>
+
+    <mat-form-field class="input">
+      <mat-label>Especialidade </mat-label>
+      <input matInput formControlName="specialty">
+    </mat-form-field>
+
+    <mat-form-field class="input">
+      <mat-label>Pertence a</mat-label>
+      <mat-select formControlName="healthUnit">
+        <mat-option *ngFor="let healthUnit of healthUnits" [value]="healthUnit.id">
+          {{ healthUnit.name }}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+    <div mat-dialog-actions>
+      <button mat-raised-button color="primary" (click)="create()">Concluir</button>
+      <button mat-button mat-dialog-close (click)="cancel()">Cancelar</button>
+    </div>
+  </form>
+</div>

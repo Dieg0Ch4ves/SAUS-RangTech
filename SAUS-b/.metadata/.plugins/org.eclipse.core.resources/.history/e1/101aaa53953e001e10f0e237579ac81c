@@ -1,0 +1,5 @@
+package com.saus.saus.controllers;
+
+public class AuthenticationController {
+
+}

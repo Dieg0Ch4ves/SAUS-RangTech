@@ -1,0 +1,29 @@
+<h2 mat-dialog-title>Agendamento</h2>
+<div mat-dialog-content>
+  <form [formGroup]="schedulingForm">
+
+    <mat-form-field class="input">
+      <mat-label>Nome </mat-label>
+      <input matInput formControlName="namePatient" name="namePatient">
+    </mat-form-field>
+
+    <mat-form-field class="input">
+      <mat-label>Documento (CPF ou CNPJ) </mat-label>
+      <input matInput formControlName="document" name="document">
+    </mat-form-field>
+
+    <mat-form-field class="input">
+      <mat-label>Status</mat-label>
+      <mat-select formControlName="status" name="status">
+        <mat-option *ngFor="let status of statusOptions" [value]="status.value">
+          {{ status.label }}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+
+    <div mat-dialog-actions>
+      <button mat-button color="primary" (click)="change()" >Concluir</button>
+      <button mat-button mat-dialog-close (click)="cancel()">Cancelar</button>
+    </div>
+  </form>
+</div>

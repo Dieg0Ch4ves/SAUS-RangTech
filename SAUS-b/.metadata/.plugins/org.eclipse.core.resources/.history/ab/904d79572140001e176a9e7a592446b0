@@ -1,0 +1,5 @@
+package com.saus.saus.entity.models;
+
+public record HealthUnitRequestDTO(String name, String openingTime, String closingTime) {
+
+}

@@ -1,0 +1,19 @@
+<section>
+  <h1><a href="/home">⬅ Voltar</a>{{ healthUnit.name }}</h1>
+  <h2>Faça um Agendamento de Consulta com um Médico !</h2>
+  <div class="list-cards">
+    <div class="card" *ngFor="let doctor of healthUnit.doctors">
+      <h1>{{ doctor.name }}</h1>
+      <p>Especialidade - <span>{{ doctor.specialty }}</span></p>
+      <p>Agendamentos ⬇</p>
+      <ul class="list-schedulings" *ngFor="let scheduling of doctor.schedulings">
+        <li>Agendado dia <span>{{scheduling.day | date: 'dd/MM/yyyy'}} as {{scheduling.time}}</span>  Paciente - <span>{{scheduling.namePatient}}</span> Status : <span>{{scheduling.status}}</span> <button *ngIf="roles()" class="delete-s" (click)="deleteScheduling(scheduling.id)">❌</button><button *ngIf="roles()" class="edit" (click)="changeScheduling(scheduling.id)">📝</button></li>
+      </ul>
+      <div class="div-options">
+        <button class="new-scheduling" (click)="addScheduling(doctor.id)">Fazer um Agendamento</button>
+        <button *ngIf="roles()" class="delete" (click)="delete(doctor.id)">Excluir</button>
+        <button *ngIf="roles()" class="change" (click)="changeDoctor(doctor.id)">Alterar</button>
+      </div>
+    </div>
+  </div>
+</section>

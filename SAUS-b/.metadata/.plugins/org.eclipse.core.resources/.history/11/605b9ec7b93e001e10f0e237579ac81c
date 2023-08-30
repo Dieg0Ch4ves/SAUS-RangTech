@@ -1,0 +1,32 @@
+package com.saus.saus.controllers;
+
+import java.time.LocalDateTime;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.saus.saus.entity.Doctor;
+import com.saus.saus.entity.models.SchedulingDTO;
+import com.saus.saus.repositories.DoctorRepository;
+import com.saus.saus.repositories.SchedulingRepository;
+
+@RestController("/scheduling")
+public class SchedulingController {
+	
+	@Autowired
+	SchedulingRepository repository;
+	
+	@Autowired
+	DoctorRepository doctorRepository;
+	
+	@PostMapping("/{idDoctor}")
+	public ResponseEntity<Object> createScheduling(@PathVariable Long idDoctor, @RequestBody SchedulingDTO data) { 
+		Doctor doctor = doctorRepository.findById(idDoctor).get();
+		
+		LocalDateTime timeScheduling = data.time();
+	}
+}

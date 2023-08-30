@@ -1,0 +1,6 @@
+package com.saus.saus.entity;
+
+import com.saus.saus.entity.UserRole;
+
+public record RegisterDTO(String login, String password, UserRole role) {
+}

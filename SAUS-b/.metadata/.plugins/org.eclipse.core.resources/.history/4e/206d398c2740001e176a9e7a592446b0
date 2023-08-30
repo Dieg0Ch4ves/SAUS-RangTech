@@ -1,0 +1,39 @@
+package com.saus.saus.services;
+
+import java.time.LocalTime;
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+import org.springframework.web.bind.annotation.RequestBody;
+
+import com.saus.saus.entity.HealthUnits;
+import com.saus.saus.entity.models.HealthUnitRequestDTO;
+import com.saus.saus.entity.models.HealthUnitResponseDTO;
+import com.saus.saus.repositories.HealthUnitRepository;
+
+import jakarta.validation.Valid;
+
+@Service
+public class HealthUnitService {
+
+	@Autowired
+	HealthUnitRepository repository;
+
+	@Autowired
+	private TimeFormatter timeService;
+
+	public HealthUnitResponseDTO create(HealthUnitRequestDTO data) {
+		LocalTime openingTime = timeService.parseTime(data.openingTime());
+		LocalTime closingTime = timeService.parseTime(data.closingTime());
+		HealthUnits healthUnit = new HealthUnits(data.name(), openingTime, closingTime);
+		HealthUnits savedHealthUnit = repository.save(healthUnit);
+		return new HealthUnitResponseDTO(savedHealthUnit.getId(), savedHealthUnit.getName(),
+				savedHealthUnit.getOpeningTime(), savedHealthUnit.getClosingTime());
+	}
+
+	public List<HealthUnits> read() {
+		List<HealthUnits> allHealtUnits = repository.findAll();
+		return List<HealthUnits>();
+	}
+}

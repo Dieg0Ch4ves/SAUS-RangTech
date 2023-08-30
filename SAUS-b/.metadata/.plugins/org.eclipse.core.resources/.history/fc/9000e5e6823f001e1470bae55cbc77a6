@@ -1,0 +1,5 @@
+package com.saus.saus.entity.models;
+
+public record HealthUnitDTO(String name, String operation) {
+
+}

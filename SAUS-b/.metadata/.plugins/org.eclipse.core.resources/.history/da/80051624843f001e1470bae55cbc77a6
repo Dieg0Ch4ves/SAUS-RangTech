@@ -1,0 +1,45 @@
+package com.saus.saus.controllers;
+
+import java.time.LocalTime;
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.saus.saus.entity.HealthUnits;
+import com.saus.saus.entity.models.HealthUnitDTO;
+import com.saus.saus.repositories.HealthUnitRepository;
+import com.saus.saus.services.TimeFormatter;
+
+import jakarta.validation.Valid;
+
+@RestController
+@RequestMapping("/healthUnit")
+public class HealthUnitsController {
+	
+	@Autowired
+	HealthUnitRepository repository;
+	
+	@Autowired
+	private TimeFormatter timeService;
+	
+	@PostMapping("/new")
+	public ResponseEntity<Object> createHealthUnit(@Valid @RequestBody HealthUnitDTO data) {
+		LocalTime openingTime = timeService.parseTime(data.openingTime());
+		LocalTime closingTime = timeService.parseTime(data.closingTime());
+		HealthUnits healthUnit = new HealthUnits(data.name(), data.openingTime(), data.closingTime());
+		HealthUnits newHealthUnit = repository.save(healthUnit);
+		return ResponseEntity.ok(newHealthUnit);
+	}
+	
+	@GetMapping
+	public ResponseEntity<List<HealthUnits>> listHealthUnits() {
+		List<HealthUnits> allHealthUnit = repository.findAll();
+		return ResponseEntity.ok(allHealthUnit);
+	}
+}

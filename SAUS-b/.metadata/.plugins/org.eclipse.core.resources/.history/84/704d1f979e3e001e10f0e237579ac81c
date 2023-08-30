@@ -1,0 +1,5 @@
+package com.saus.saus.repositories;
+
+public interface DoctorRepository {
+
+}

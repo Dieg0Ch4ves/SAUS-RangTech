@@ -1,0 +1,34 @@
+package com.saus.saus.entity;
+
+import java.time.LocalDateTime;
+
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.ManyToOne;
+import jakarta.persistence.Table;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+
+@Entity
+@Table(name = "scheduling")
+@Getter
+@AllArgsConstructor
+@NoArgsConstructor
+public class Scheduling {
+
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private Long id;
+	
+	private LocalDateTime time;
+	
+	private Status status;
+	
+	@ManyToOne
+	@JoinColumn(name = "doctor_id")
+	private Doctor doctor;
+}

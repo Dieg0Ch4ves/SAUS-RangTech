@@ -1,0 +1,9 @@
+package com.saus.saus.repositories;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import com.saus.saus.entity.HealthUnits;
+
+public interface HealthUnitRepository extends JpaRepository<HealthUnits, Long>{
+
+}

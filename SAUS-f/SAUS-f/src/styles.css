@@ -1,0 +1,24 @@
+* {
+  padding: 0px;
+  margin: 0px;
+  text-decoration: none;
+  list-style: none;
+  font-family: "Roboto", sans-serif;
+}
+
+body {
+  display: flex;
+  background-color: #F6F5FC;
+}
+
+:root {
+  --cor-1: #000;
+  --cor-2: #FFF;
+  --cor-3: #CCC;
+  --cor-4: #777;
+  --cor-5: #72afff;
+  --cor-6: #4a6890;
+}
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

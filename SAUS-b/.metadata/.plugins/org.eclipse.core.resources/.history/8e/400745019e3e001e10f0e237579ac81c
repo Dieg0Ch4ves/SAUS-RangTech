@@ -1,0 +1,14 @@
+package com.saus.saus.entity;
+
+import java.time.LocalDateTime;
+
+public class Scheduling {
+
+	private Long id;
+	
+	private LocalDateTime time;
+	
+	private Status status;
+	
+	private Doctor doctor;
+}

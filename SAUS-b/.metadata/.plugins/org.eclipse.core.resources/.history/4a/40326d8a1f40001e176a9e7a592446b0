@@ -1,0 +1,5 @@
+package com.saus.saus.services;
+
+public class HealthUnitService {
+
+}

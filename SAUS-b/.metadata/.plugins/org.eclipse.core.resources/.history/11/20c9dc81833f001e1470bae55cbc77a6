@@ -1,0 +1,7 @@
+package com.saus.saus.entity.models;
+
+import java.time.LocalDateTime;
+
+public record HealthUnitDTO(String name, String openingTime, String closingTime) {
+
+}

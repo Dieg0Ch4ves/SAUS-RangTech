@@ -1,0 +1,9 @@
+<section>
+  <h1>Faça o seu Login !</h1>
+  <form action="">
+    <input type="text" placeholder="E-mail OU CPF *" name="login" [(ngModel)]="user.login">
+    <input type="text" placeholder="Senha *" name="password" [(ngModel)]="user.password">
+    <button (click)="login()">Entrar</button>
+  </form>
+  <a href="/register">Não possui cadastro ?</a>
+</section>

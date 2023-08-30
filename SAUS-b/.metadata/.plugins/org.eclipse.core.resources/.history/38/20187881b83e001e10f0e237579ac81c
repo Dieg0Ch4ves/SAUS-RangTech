@@ -1,0 +1,7 @@
+package com.saus.saus.entity.models;
+
+public record SchedulingDTO() {
+
+}
+
+String a = "Criar";

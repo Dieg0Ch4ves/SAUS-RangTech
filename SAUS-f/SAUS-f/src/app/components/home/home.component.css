@@ -1,0 +1,123 @@
+section {
+  display: flex;
+  flex-direction: column;
+  margin-top: 100px;
+  align-items: center;
+  gap: 40px;
+  margin-left: 80px;
+}
+
+h1 {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+h1 button {
+  position: relative;
+  color: var(--cor-5);
+  background: transparent;
+  border: none;
+  font-size: 1.75rem;
+  font-weight: bold;
+}
+
+h1 button::before {
+  content: "";
+  background: var(--cor-5);
+  width: 0;
+  bottom: 0px;
+  height: 3px;
+  position: absolute;
+  transition: 0.3s;
+}
+
+h1 button:hover{
+  cursor: pointer;
+}
+
+h1 button:hover::before {
+  width: 100%;
+}
+
+h2 {
+  font-weight: 400;
+}
+
+span {
+  font-weight: bold;
+}
+
+.list-cards {
+  display: flex;
+  gap: 40px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.card {
+  display: flex;
+  background: var(--cor-2);
+  padding: 20px;
+  border-radius: 10px;
+  flex-direction: column;
+  gap: 30px;
+  box-shadow: 8px 4px 10px rgba(0, 0, 0, 0.04);
+  transition: 0.3s;
+}
+
+
+.card:hover {
+  padding: 40px;
+}
+
+.div-options {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.redirect {
+  width: 80px;
+  font-size: 1.25rem;
+  padding: 10px;
+  border-radius: 4px;
+  border: 2px solid var(--cor-1);
+  background: var(--cor-5);
+  color: var(--cor-2);
+}
+
+.redirect:hover {
+  cursor: pointer;
+  background: var(--cor-6);
+}
+
+.delete {
+  width: 80px;
+  font-size: 1.25rem;
+  padding: 10px;
+  border-radius: 4px;
+  border: 2px solid var(--cor-1);
+  background: red;
+  color: var(--cor-2);
+}
+
+.delete:hover {
+  cursor: pointer;
+  background: rgb(157, 0, 0);
+}
+
+.change {
+  width: 80px;
+  font-size: 1.25rem;
+  padding: 10px;
+  border-radius: 4px;
+  border: 2px solid var(--cor-1);
+  background: yellow;
+  color: var(--cor-1);
+}
+
+.change:hover {
+  cursor: pointer;
+  background: rgb(168, 168, 0);
+}

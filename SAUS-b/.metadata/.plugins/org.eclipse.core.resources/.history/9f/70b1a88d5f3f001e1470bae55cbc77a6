@@ -1,0 +1,9 @@
+package com.saus.saus.entity.models;
+
+import java.time.LocalDateTime;
+
+import com.saus.saus.entity.Status;
+
+public record SchedulingDTO(LocalDateTime time, Status status) {
+}
+

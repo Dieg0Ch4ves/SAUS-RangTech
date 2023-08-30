@@ -1,0 +1,17 @@
+<section>
+  <h1><button (click)="logout()" routerLink="/login" >⬅ Sair</button>Bem-vindo ao SAUS, {{ user.name }}</h1>
+  <h2>Escolha a melhor Unidade de Saúde para Você</h2>
+  <div class="list-cards">
+    <div *ngFor="let healthUnit of healthUnits" class="card">
+      <h1>{{ healthUnit.name }}</h1>
+      <p>Localização - <span>{{ healthUnit.local }}</span></p>
+      <p>Horario de Funcionamento - <span>{{ healthUnit.openingTime }}</span> até <span>{{ healthUnit.closingTime }}</span></p>
+      <p>Total Médicos - <span>{{ healthUnit.doctors.length }}</span></p>
+      <div class="div-options">
+        <button class="redirect" (click)="redirect(healthUnit.id)" >Ir !</button>
+        <button *ngIf="roles()" class="delete" (click)="delete(healthUnit.id)">Excluir</button>
+        <button *ngIf="roles()" class="change" (click)="change(healthUnit.id)">Alterar</button>
+      </div>
+    </div>
+  </div>
+</section>

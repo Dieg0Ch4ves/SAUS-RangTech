@@ -1,0 +1,42 @@
+section {
+  display: flex;
+  flex-direction: column;
+  margin-top: 60px;
+  gap: 20px;
+  align-items: center;
+  margin-left: 600px;
+  margin-top: 100px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+}
+
+form input {
+  font-size: 1.5rem;
+  width: 300px;
+  padding: 10px;
+  border-radius: 4px;
+  border: 1px solid #CCC;
+  box-shadow: 8px 4px 10px rgba(0, 0, 0, 0.04);
+}
+
+form button {
+  width: 200px;
+  font-size: 1.25rem;
+  padding: 10px;
+  border-radius: 10px;
+  border: 2px solid var(--cor-1);
+  background: var(--cor-5);
+  color: var(--cor-2);
+}
+
+form button:hover {
+  cursor: pointer;
+  background: var(--cor-6);
+  color: #FFF;
+}
+

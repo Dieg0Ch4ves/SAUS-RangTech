@@ -1,0 +1,12 @@
+package com.saus.saus.entity;
+
+public class HealthUnits {
+
+	private Long id;
+	private String name;
+	private String operation;
+	
+	
+	private Doctors doctors;
+	
+}

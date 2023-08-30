@@ -1,0 +1,9 @@
+<nav *ngIf="roles()" class="nav-bar" [ngClass]="{'nav-bar-scrolled' : isNavBarScrolled}">
+  <div class="flex">
+    <a>SAUS (ADMIN)</a>
+    <ul class="bar-div">
+      <a><button (click)="addHealthUnit()">Criar uma nova Unidade de Saúde</button></a>
+      <a><button (click)="addDoctor()">Criar um novo Médico</button></a>
+    </ul>
+  </div>
+</nav>

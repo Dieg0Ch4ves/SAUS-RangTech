@@ -1,0 +1,9 @@
+package com.saus.saus.entity;
+
+public class Doctors {
+
+	private Long id;
+	private String name;
+	private String specialty;
+	
+}

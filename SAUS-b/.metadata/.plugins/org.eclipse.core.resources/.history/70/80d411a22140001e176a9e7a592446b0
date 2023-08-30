@@ -1,0 +1,7 @@
+package com.saus.saus.entity.models;
+
+import java.time.LocalTime;
+
+public record HealtUnitResponseDTO(Long id, String name, LocalTime openingTime, LocalTime closingTime) {
+
+}

@@ -1,0 +1,8 @@
+package com.saus.saus.controllers;
+
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController("Scheduling")
+public class SchedulingController {
+
+}

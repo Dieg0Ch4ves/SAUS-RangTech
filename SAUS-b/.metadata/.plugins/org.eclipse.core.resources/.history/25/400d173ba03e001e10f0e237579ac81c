@@ -1,0 +1,27 @@
+package com.saus.saus.controllers;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.saus.saus.entity.Doctor;
+import com.saus.saus.entity.models.DoctorDTO;
+import com.saus.saus.repositories.DoctorRepository;
+import com.saus.saus.repositories.HealthUnitRepository;
+
+@RestController("/doctor")
+public class DoctorController {
+
+	@Autowired
+	DoctorRepository repository;
+	
+	@Autowired
+	HealthUnitRepository HuRepository;
+	
+	@PostMapping
+	public ResponseEntity<Doctor> createDoctor(@RequestBody DoctorDTO doctor) {
+		
+	}
+}
