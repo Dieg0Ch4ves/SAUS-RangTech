@@ -1,6 +1,4 @@
-# SAUS-RangTech
-
-## Sistema de Agendamento em Unidades de Saúde
+# Sistema de Agendamento em Unidades de Saúde
 
 Este repositório contém um sistema de agendamento em unidades de saúde, desenvolvido como parte de um projeto que abrange tanto o backend utilizando Spring Boot e Hibernate, quanto o frontend criado com Angular.
 
